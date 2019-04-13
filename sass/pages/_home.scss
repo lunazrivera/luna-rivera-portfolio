@@ -1,11 +1,14 @@
 .section-about {
      background-color: $color-gray-light-1;
-     padding: 24rem 0;
+     padding: 24rem 3rem;
      margin-top: -20vh;
+     @include respond(tab-port) {
+          padding: 15rem 0;
+     }
 }
 
 .section-features {
-     padding: 20rem 0;
+     padding: 20rem 3rem;
      background-image: linear-gradient(to right bottom,
      rgba($color-gray-dark, 0.8),
      rgba($color-black, 0.8)), 
@@ -17,10 +20,16 @@
      & > * {
           transform: skewY(7deg);
      }
+     @include respond(tab-port) {
+          padding: 10rem 0;
+     }
 }
 
 .section-projects {
      background-color: $color-gray-light-1;
      padding: 24rem 0 15rem 0;
      margin-top: -10rem;
+     @include respond(tab-port) {
+          padding: 15rem 0 10rem 0;
+     }
 }

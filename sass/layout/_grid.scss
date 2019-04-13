@@ -5,6 +5,14 @@
      
      &:not(:last-child) { //The :not pseudo selector lets you select everything except the lastchild in this case
           margin-bottom: $gutter-vertical;
+          @include respond(tab-port) {
+               margin-bottom: $gutter-vertical-small;
+          }
+     }
+
+     @include respond(tab-port) {
+          max-width: 50rem; 
+          padding: 0 3rem;
      }
 
      @include clearfix;
@@ -12,8 +20,17 @@
      [class^="col-"] { //The attributes select an attribute to be styled, -> ^ this character lets you select all attributes starting with col- for example. -> * this select every attribute that contains for example col-. -> $ this select every attribute that ends with for example col-.
           // background-color: orangered;
           float: left;
+
           &:not(:last-child) {
                margin-right: $gutter-horizontal;
+               @include respond(tab-port) {
+                    margin-right: 0;
+                    margin-bottom: $gutter-vertical-small;
+               }
+          }
+
+          @include respond(tab-port) {
+               width: 100% !important;
           }
      }
 
